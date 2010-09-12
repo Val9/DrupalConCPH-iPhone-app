@@ -1,8 +1,11 @@
 Ti.UI.setBackgroundColor('#FFF');
-var tabGroup = Ti.UI.createTabGroup();
 
-/* Confrence program / session
--------------------------------------------*/
+/**
+ * Creating tabs for diffrent windows.
+ * Implementation of createWindow() and createTab()
+ */
+
+// Confrence program / session
 var winProgram = Ti.UI.createWindow({
 	url:'windows/tracks.js',
 	title: 'Program',
@@ -15,8 +18,7 @@ var tabProgram = Ti.UI.createTab({
 	window:winProgram
 });
 
-/* My program
--------------------------------------------*/
+// My program
 var winMyProgram = Ti.UI.createWindow({
 	url:'windows/myprogram.js',
 	title: 'My Program',
@@ -29,8 +31,7 @@ tabMyProgram = Ti.UI.createTab({
 	window:winMyProgram
 });
 
-/* Information about copenhagen
--------------------------------------------*/
+// Simple information about the con
 var winCphInfo = Ti.UI.createWindow({
 	url:'windows/info.js',
 	title: 'DrupalCon CPH',
@@ -43,8 +44,7 @@ var tabCphInfo = Ti.UI.createTab({
 	window:winCphInfo
 });
 
-/* Twitter
--------------------------------------------*/
+// Tweets from DrupalCon
 var winTwitter = Ti.UI.createWindow({
 	url:'windows/twitter.js',
 	title: 'Announcements',
@@ -57,8 +57,14 @@ var tabTwitter = Ti.UI.createTab({
 	window:winTwitter
 });
 
-/* Add tabs to tabGroup
--------------------------------------------*/
+/**
+ * Adding tabs to tabgroup, and then open it.
+ * Implementation of createTabGroup()
+ */
+
+var tabGroup = Ti.UI.createTabGroup(); 
+ 
+// Adding tabs to tabGroup 
 tabGroup.addTab(tabProgram);
 tabGroup.addTab(tabMyProgram);  
 tabGroup.addTab(tabCphInfo);
